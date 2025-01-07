@@ -5,5 +5,5 @@
 - SWR for server state management
 - react-hook-form for forms
 - tailwindcss
-- shadcnui
+- shadcnui (I will use Material UI)
 - lucid-icons or lottie-icons
