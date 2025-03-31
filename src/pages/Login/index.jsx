@@ -1,6 +1,6 @@
 import { Grid2 as Grid, CssBaseline } from "@mui/material";
 import SeuCarlosBackground from "../../assets/seu-carlos.png";
-import LoginForm from "../../components/LoginForm";
+import LoginModal from "../../components/LoginModal";
 
 const Login = () => {
   return (
@@ -24,7 +24,7 @@ const Login = () => {
             backgroundColor: "#A5A5A5",
           }}
         >
-          <LoginForm />
+          <LoginModal />
         </Grid>
       </Grid>
     </>

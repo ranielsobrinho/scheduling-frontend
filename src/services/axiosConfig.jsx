@@ -6,5 +6,5 @@ export const usersService = axios.create({
   headers: {
     "x-access-token": accessToken,
   },
-  baseURL: import.meta.env.USERS_SERVICE_API,
+  baseURL: import.meta.env.VITE_USERS_SERVICE_API,
 });
