@@ -10,9 +10,9 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import LoginIcon from "@mui/icons-material/Login";
 import UsersService from "../../services/usersService";
-import LogInForm from "../LoginForm";
+import SignInForm from "../SignInForm";
 
-const LoginModal = ({ open, handleClose }) => {
+const SignInModal = ({ open, handleClose }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
@@ -37,16 +37,17 @@ const LoginModal = ({ open, handleClose }) => {
 
   return (
     <Dialog open={open} onClose={handleClose} fullWidth={true} maxWidth="md">
-      <DialogTitle>Entrar com sua conta</DialogTitle>
+      <DialogTitle>Cadastrar uma nova conta</DialogTitle>
       <DialogContent>
         <form
           onSubmit={handleSubmit(onSubmit)}
           style={{
             display: "flex",
             flexDirection: "column",
+            height: "17rem",
           }}
         >
-          <LogInForm register={register} />
+          <SignInForm register={register} />
         </form>
       </DialogContent>
       <DialogActions>
@@ -61,7 +62,7 @@ const LoginModal = ({ open, handleClose }) => {
             color="primary"
             startIcon={<LoginIcon />}
           >
-            Entrar
+            Cadastrar
           </Button>
         </div>
       </DialogActions>
@@ -69,9 +70,9 @@ const LoginModal = ({ open, handleClose }) => {
   );
 };
 
-LoginModal.propTypes = {
+SignInModal.propTypes = {
   open: PropTypes.bool,
   handleClose: PropTypes.func,
 };
 
-export default LoginModal;
+export default SignInModal;
