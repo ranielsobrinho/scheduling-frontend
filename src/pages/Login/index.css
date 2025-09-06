@@ -1,0 +1,18 @@
+.blur-bg {
+  position: relative;
+  overflow: hidden;
+}
+.blur-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("your-image-url");
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+}
+.blur-bg > * {
+  position: relative;
+  z-index: 1;
+}
